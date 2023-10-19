@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using ProyectoAdministracionDBA.Views;
+using System.Diagnostics;
 
 namespace ProyectoAdministracionDBA
 {
@@ -30,15 +31,24 @@ namespace ProyectoAdministracionDBA
         /// </summary>
         private void InitializeComponent()
         {
+            TableSpaceAdd = new TableSpaceAdd_View();
             tableLayoutPanel1 = new TableLayoutPanel();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
-            button1 = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             SuspendLayout();
+            // 
+            // TableSpaceAdd
+            // 
+            TableSpaceAdd.BackColor = Color.Red;
+            TableSpaceAdd.Dock = DockStyle.Fill;
+            TableSpaceAdd.Location = new Point(3, 3);
+            TableSpaceAdd.Name = "TableSpaceAdd";
+            TableSpaceAdd.Size = new Size(791, 417);
+            TableSpaceAdd.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -78,7 +88,7 @@ namespace ProyectoAdministracionDBA
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(button1);
+            tabPage2.Controls.Add(TableSpaceAdd);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -86,16 +96,6 @@ namespace ProyectoAdministracionDBA
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(97, 46);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // Form1
             // 
@@ -116,6 +116,6 @@ namespace ProyectoAdministracionDBA
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private Button button1;
+        private TableSpaceAdd_View TableSpaceAdd;
     }
 }

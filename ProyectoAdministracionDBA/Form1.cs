@@ -31,26 +31,16 @@ namespace ProyectoAdministracionDBA
                 tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.AutoSize));*/
 
             }
-            tabControl1.Size = new Size(this.Width, this.Height);
-            tableLayoutPanel1.Size = new Size(tabPage1.Width, tabPage1.Height);
-            tabControl1.SizeMode = TabSizeMode.Fixed;
-
+            tabControl1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Dock = DockStyle.Fill;
 
 
         }
 
 
 
-        protected override void OnSizeChanged(EventArgs e)
-        {
-            base.OnSizeChanged(e);
-            tabControl1.Size = new Size(this.Width, this.Height);
-            tableLayoutPanel1.Size = new Size(tabPage1.Width, tabPage1.Height);
-        }
+        
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
