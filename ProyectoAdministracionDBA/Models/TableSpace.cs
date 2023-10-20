@@ -18,5 +18,16 @@ namespace ProyectoAdministracionDBA.Models
         public string Size { get; set; }
 
         public string File_Dir {  get; set; }
+
+        public bool AutoExtend { get; set; }
+
+        public string TamannoIncremento { get; set; }
+        public string MaxSize { get; set; }
+
+        public override string ToString()
+        {
+
+            return "TABLE SPACE---------NAME: "+ this.Name + " File Dir: "+ this.File_Dir + " autoExtend: "+ this.AutoExtend + " tamaño incremento: "+ TamannoIncremento + " MaxBytes: " + MaxSize;
+        }
     }
 }

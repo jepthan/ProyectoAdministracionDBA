@@ -37,10 +37,5 @@ namespace ProyectoAdministracionDBA
 
         }
 
-
-
-        
-
-
     }
 }

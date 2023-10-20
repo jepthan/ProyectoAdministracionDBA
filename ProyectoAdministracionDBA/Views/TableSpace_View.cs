@@ -9,9 +9,25 @@ namespace ProyectoAdministracionDBA.Views
         {
             this.table = table;
             InitializeComponent();
+            NameLabel.Dock = DockStyle.Fill;
+            FileDirLabel.Dock = DockStyle.Fill;
+            AutoExtendCheck.Dock = DockStyle.Fill;
+            TamannoIncrementoTextBox.Dock = DockStyle.Fill;
+            MaxSizeTextBox.Dock = DockStyle.Fill;
+            BtnUpdate.Dock = DockStyle.Fill;
+            SizeTextBox.Dock = DockStyle.Fill;
 
-            label1.Text = table.Name;
-            textBox1.Text = table.Size.ToString();
+
+
+
+            NameLabel.Text = table.Name;
+            FileDirLabel.Text = table.File_Dir;
+            SizeTextBox.Text = table.Size;
+            TamannoIncrementoTextBox.Text = table.TamannoIncremento;
+            AutoExtendCheck.Checked = table.AutoExtend;
+            MaxSizeTextBox.Text = table.MaxSize;
+
+
 
 
         }
@@ -25,7 +41,7 @@ namespace ProyectoAdministracionDBA.Views
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-            this.table.Size = textBox1.Text;
+            this.table.Size = SizeTextBox.Text;
 
 
         }

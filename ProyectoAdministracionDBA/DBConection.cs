@@ -51,7 +51,7 @@ namespace ProyectoAdministracionDBA
         public static List<TableSpace> GetTableSpaces()
         {
             //cmd.CommandText = "SELECT TABLESPACE_NAME, status from dba_tablespaces where status='ONLINE'";
-            cmd.CommandText = "SELECT tablespace_name, bytes/1024/1024, File_NAME from dba_data_files";
+            cmd.CommandText = "SELECT tablespace_name, bytes/1024/1024, File_NAME, AUTOEXTENSIBLE,INCREMENT_BY, MAXBYTES from dba_data_files \r\nunion all\r\nSELECT tablespace_name, bytes/1024/1024, File_NAME, AUTOEXTENSIBLE,INCREMENT_BY, MAXBYTES from dba_temp_files";
             //Console.WriteLine(cmd.CommandText);
             //cmd.ExecuteNonQuery();
 
@@ -62,7 +62,20 @@ namespace ProyectoAdministracionDBA
             while (reader.Read())
             {
                 Debug.WriteLine("TableSpace Name " + reader.GetString(0) + " Status: " + reader.GetString(1));
-                result.Add(new TableSpace(reader.GetString(0), reader.GetString(1), reader.GetString(2)));
+                TableSpace tempTable = new TableSpace(reader.GetString(0), reader.GetString(1), reader.GetString(2));
+                if("YES" == reader.GetString(3))
+                {
+                    tempTable.AutoExtend = true;
+                }
+                else
+                {
+                    tempTable.AutoExtend = false;
+                }
+                tempTable.MaxSize = reader.GetString(5);
+                tempTable.TamannoIncremento = reader.GetString(4);
+
+                Debug.WriteLine(tempTable.ToString());
+                result.Add(tempTable);
 
             }
 
