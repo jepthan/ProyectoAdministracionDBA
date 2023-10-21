@@ -29,5 +29,16 @@ namespace ProyectoAdministracionDBA.Models
 
             return "TABLE SPACE---------NAME: "+ this.Name + " File Dir: "+ this.File_Dir + " autoExtend: "+ this.AutoExtend + " tamaño incremento: "+ TamannoIncremento + " MaxBytes: " + MaxSize;
         }
+        public void AddTableToDB()
+        {
+            //TODO
+        }
+        public void RemoveTableFromDB() {
+            //TODO
+        }
+        public void ModifyTableFormDB()
+        {
+            //TODO
+        }
     }
 }
