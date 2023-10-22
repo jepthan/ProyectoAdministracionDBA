@@ -45,5 +45,21 @@ namespace ProyectoAdministracionDBA.Views
 
 
         }
+
+        private void Btn_Borrar_Click(object sender, EventArgs e)
+        {
+            string message = "Estas seguro que quieres eliminar este tablespace?";
+            string title = "Comfirmacion Eliminar tablespace";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                //Do something
+            }
+            else
+            {
+                // Do something
+            }
+        }
     }
 }

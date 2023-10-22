@@ -47,7 +47,7 @@ namespace ProyectoAdministracionDBA
             TableSpaceAdd.Dock = DockStyle.Fill;
             TableSpaceAdd.Location = new Point(3, 3);
             TableSpaceAdd.Name = "TableSpaceAdd";
-            TableSpaceAdd.Size = new Size(791, 417);
+            TableSpaceAdd.Size = new Size(785, 411);
             TableSpaceAdd.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -94,7 +94,7 @@ namespace ProyectoAdministracionDBA
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(791, 417);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Agregar TableSpace";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
