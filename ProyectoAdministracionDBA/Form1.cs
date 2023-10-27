@@ -36,7 +36,7 @@ namespace ProyectoAdministracionDBA
             tabControl1.Selected += TabControl1_Selected;
             
         }
-        private void TabControl1_Selected(Object sender, TabControlEventArgs e)
+        private void TabControl1_Selected(Object? sender, TabControlEventArgs e)
         {
 
             System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();

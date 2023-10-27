@@ -16,10 +16,10 @@ namespace ProyectoAdministracionDBA.Models
 
         public string File_Dir { get; set; }
 
-        public bool AutoExtend { get; set; }
+        public bool? AutoExtend { get; set; }
 
-        public string TamannoIncremento { get; set; }
-        public string MaxSize { get; set; }
+        public string? TamannoIncremento { get; set; }
+        public string? MaxSize { get; set; }
 
         public override string ToString()
         {
