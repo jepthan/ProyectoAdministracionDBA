@@ -1,8 +1,6 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using ProyectoAdministracionDBA.Models;
 using System.Diagnostics;
-using System.Diagnostics.Metrics;
-using System.Drawing;
 
 namespace ProyectoAdministracionDBA
 {
@@ -63,7 +61,7 @@ namespace ProyectoAdministracionDBA
             {
                 Debug.WriteLine("TableSpace Name " + reader.GetString(0) + " Status: " + reader.GetString(1));
                 TableSpace tempTable = new TableSpace(reader.GetString(0), reader.GetString(1), reader.GetString(2));
-                if("YES" == reader.GetString(3))
+                if ("YES" == reader.GetString(3))
                 {
                     tempTable.AutoExtend = true;
                 }
@@ -85,9 +83,9 @@ namespace ProyectoAdministracionDBA
         }
         public static void ChangeTableSpaceSize(TableSpace table)
         {
-            cmd.CommandText = "ALTER DATABASE DATAFILE '" + table.File_Dir + "' RESIZE " +table.Size +"M";
+            cmd.CommandText = "ALTER DATABASE DATAFILE '" + table.File_Dir + "' RESIZE " + table.Size + "M";
             int rows = cmd.ExecuteNonQuery();
-            Debug.WriteLine("TAMAño actualisado?"+ rows);
+            Debug.WriteLine("TAMAño actualisado?" + rows);
         }
 
         static DBConection()

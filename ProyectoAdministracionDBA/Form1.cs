@@ -14,7 +14,7 @@ namespace ProyectoAdministracionDBA
         public Form1()
         {
             InitializeComponent();
-            List<TableSpace> results = DBConection.GetTableSpaces();
+            List<TableSpace> results = TableSpace.GetTableSpaces();
 
 
             for (int i = 0; i < results.Count; i++)
