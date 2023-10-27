@@ -1,10 +1,5 @@
 ﻿using Oracle.ManagedDataAccess.Client;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoAdministracionDBA.Models
 {
@@ -19,7 +14,7 @@ namespace ProyectoAdministracionDBA.Models
         public string Name { get; set; }
         public string Size { get; set; }
 
-        public string File_Dir {  get; set; }
+        public string File_Dir { get; set; }
 
         public bool AutoExtend { get; set; }
 
@@ -29,13 +24,14 @@ namespace ProyectoAdministracionDBA.Models
         public override string ToString()
         {
 
-            return "TABLE SPACE---------NAME: "+ this.Name + " File Dir: "+ this.File_Dir + " autoExtend: "+ this.AutoExtend + " tamaño incremento: "+ TamannoIncremento + " MaxBytes: " + MaxSize;
+            return "TABLE SPACE---------NAME: " + this.Name + " File Dir: " + this.File_Dir + " autoExtend: " + this.AutoExtend + " tamaño incremento: " + TamannoIncremento + " MaxBytes: " + MaxSize;
         }
         public void AddTableToDB()
         {
             //TODO
         }
-        public void RemoveTableFromDB() {
+        public void RemoveTableFromDB()
+        {
             //TODO
         }
         public void ModifyTableFormDB()

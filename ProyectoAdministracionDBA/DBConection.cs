@@ -46,7 +46,7 @@ namespace ProyectoAdministracionDBA
                 Debug.WriteLine(ex.ToString());
             }
         }
-        
+
         public static void ChangeTableSpaceSize(TableSpace table)
         {
             cmd.CommandText = "ALTER DATABASE DATAFILE '" + table.File_Dir + "' RESIZE " + table.Size + "M";
