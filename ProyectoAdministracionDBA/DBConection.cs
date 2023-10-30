@@ -1,8 +1,6 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using ProyectoAdministracionDBA.Models;
 using System.Diagnostics;
-using System.Diagnostics.Metrics;
-using System.Drawing;
 
 namespace ProyectoAdministracionDBA
 {
@@ -48,46 +46,12 @@ namespace ProyectoAdministracionDBA
                 Debug.WriteLine(ex.ToString());
             }
         }
-        public static List<TableSpace> GetTableSpaces()
-        {
-            //cmd.CommandText = "SELECT TABLESPACE_NAME, status from dba_tablespaces where status='ONLINE'";
-            cmd.CommandText = "SELECT tablespace_name, bytes/1024/1024, File_NAME, AUTOEXTENSIBLE,INCREMENT_BY, MAXBYTES from dba_data_files \r\nunion all\r\nSELECT tablespace_name, bytes/1024/1024, File_NAME, AUTOEXTENSIBLE,INCREMENT_BY, MAXBYTES from dba_temp_files";
-            //Console.WriteLine(cmd.CommandText);
-            //cmd.ExecuteNonQuery();
 
-            OracleDataReader reader = cmd.ExecuteReader();
-
-            List<TableSpace> result = new List<TableSpace>();
-
-            while (reader.Read())
-            {
-                Debug.WriteLine("TableSpace Name " + reader.GetString(0) + " Status: " + reader.GetString(1));
-                TableSpace tempTable = new TableSpace(reader.GetString(0), reader.GetString(1), reader.GetString(2));
-                if("YES" == reader.GetString(3))
-                {
-                    tempTable.AutoExtend = true;
-                }
-                else
-                {
-                    tempTable.AutoExtend = false;
-                }
-                tempTable.MaxSize = reader.GetString(5);
-                tempTable.TamannoIncremento = reader.GetString(4);
-
-                Debug.WriteLine(tempTable.ToString());
-                result.Add(tempTable);
-
-            }
-
-            reader.Dispose();
-
-            return result;
-        }
         public static void ChangeTableSpaceSize(TableSpace table)
         {
-            cmd.CommandText = "ALTER DATABASE DATAFILE '" + table.File_Dir + "' RESIZE " +table.Size +"M";
+            cmd.CommandText = "ALTER DATABASE DATAFILE '" + table.File_Dir + "' RESIZE " + table.Size + "M";
             int rows = cmd.ExecuteNonQuery();
-            Debug.WriteLine("TAMAño actualisado?"+ rows);
+            Debug.WriteLine("TAMAño actualisado?" + rows);
         }
 
         static DBConection()

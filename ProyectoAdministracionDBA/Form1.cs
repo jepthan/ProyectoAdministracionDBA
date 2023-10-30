@@ -14,7 +14,7 @@ namespace ProyectoAdministracionDBA
         public Form1()
         {
             InitializeComponent();
-            List<TableSpace> results = DBConection.GetTableSpaces();
+            List<TableSpace> results = TableSpace.GetTableSpaces();
 
 
             for (int i = 0; i < results.Count; i++)
@@ -36,7 +36,7 @@ namespace ProyectoAdministracionDBA
             tabControl1.Selected += TabControl1_Selected;
 
         }
-        private void TabControl1_Selected(Object sender, TabControlEventArgs e)
+        private void TabControl1_Selected(Object? sender, TabControlEventArgs e)
         {
 
             System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
