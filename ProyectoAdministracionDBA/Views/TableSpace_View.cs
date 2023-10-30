@@ -16,6 +16,8 @@ namespace ProyectoAdministracionDBA.Views
             MaxSizeTextBox.Dock = DockStyle.Fill;
             BtnUpdate.Dock = DockStyle.Fill;
             SizeTextBox.Dock = DockStyle.Fill;
+            SizeTextBox.Dock = DockStyle.Fill;
+            SizeTextBox.Dock = DockStyle.Fill;
 
 
 
@@ -24,7 +26,7 @@ namespace ProyectoAdministracionDBA.Views
             FileDirLabel.Text = table.File_Dir;
             SizeTextBox.Text = table.Size;
             TamannoIncrementoTextBox.Text = table.TamannoIncremento;
-            AutoExtendCheck.Checked = table.AutoExtend;
+            AutoExtendCheck.Checked = (bool)table.AutoExtend;
             MaxSizeTextBox.Text = table.MaxSize;
 
 

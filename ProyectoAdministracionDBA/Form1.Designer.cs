@@ -37,9 +37,11 @@ namespace ProyectoAdministracionDBA
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
+            indecesAdd_View1 = new IndecesAdd_View();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
+            tabPage3.SuspendLayout();
             SuspendLayout();
             // 
             // TableSpaceAdd
@@ -101,6 +103,7 @@ namespace ProyectoAdministracionDBA
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(indecesAdd_View1);
             tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
@@ -109,17 +112,25 @@ namespace ProyectoAdministracionDBA
             tabPage3.Text = "Crear Indices";
             tabPage3.UseVisualStyleBackColor = true;
             // 
+            // indecesAdd_View1
+            // 
+            indecesAdd_View1.Location = new Point(8, 6);
+            indecesAdd_View1.Name = "indecesAdd_View1";
+            indecesAdd_View1.Size = new Size(464, 365);
+            indecesAdd_View1.TabIndex = 0;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1040, 547);
             Controls.Add(tabControl1);
             Name = "Form1";
             Text = "Form1";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
+            tabPage3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -130,5 +141,6 @@ namespace ProyectoAdministracionDBA
         private TabPage tabPage2;
         private TableSpaceAdd_View TableSpaceAdd;
         private TabPage tabPage3;
+        private IndecesAdd_View indecesAdd_View1;
     }
 }
