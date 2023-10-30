@@ -36,6 +36,7 @@ namespace ProyectoAdministracionDBA
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
+            tabPage3 = new TabPage();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -69,6 +70,7 @@ namespace ProyectoAdministracionDBA
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -97,6 +99,16 @@ namespace ProyectoAdministracionDBA
             tabPage2.Text = "Agregar TableSpace";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            tabPage3.Location = new Point(4, 29);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(791, 417);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Crear Indices";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -117,5 +129,6 @@ namespace ProyectoAdministracionDBA
         private TabPage tabPage1;
         private TabPage tabPage2;
         private TableSpaceAdd_View TableSpaceAdd;
+        private TabPage tabPage3;
     }
 }
