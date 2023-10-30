@@ -34,7 +34,7 @@ namespace ProyectoAdministracionDBA
             tabControl1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tabControl1.Selected += TabControl1_Selected;
-            
+
         }
         private void TabControl1_Selected(Object sender, TabControlEventArgs e)
         {
