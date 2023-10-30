@@ -16,6 +16,7 @@ namespace ProyectoAdministracionDBA.Views
         public IndecesAdd_View()
         {
             InitializeComponent();
+            Indice = new Indice("","","");
             //this.Dock = DockStyle.Fill;
         }
         private Indice Indice { get; set; }
