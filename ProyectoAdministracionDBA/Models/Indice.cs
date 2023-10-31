@@ -21,9 +21,12 @@ namespace ProyectoAdministracionDBA.Models
             
             //TODO codigo de dba
         }
-        public void ReconstruirIndice(string name)
+        public static void ReconstruirIndice(string name)
         {
             //TODO RECONSTRUIR INDICE DBA
+        }
+        public static void Delete(string name) { 
+            // eliminar indice con el nombre
         }
     }
 }

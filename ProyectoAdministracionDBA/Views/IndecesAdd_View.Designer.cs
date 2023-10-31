@@ -41,6 +41,10 @@
             label7 = new Label();
             NombreRecTB = new TextBox();
             ReconstruirBtn = new Button();
+            label9 = new Label();
+            label8 = new Label();
+            DeleteNameTB = new TextBox();
+            DeliteIndexBtn = new Button();
             label1 = new Label();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -59,12 +63,16 @@
             flowLayoutPanel1.Controls.Add(label7);
             flowLayoutPanel1.Controls.Add(NombreRecTB);
             flowLayoutPanel1.Controls.Add(ReconstruirBtn);
+            flowLayoutPanel1.Controls.Add(label9);
+            flowLayoutPanel1.Controls.Add(label8);
+            flowLayoutPanel1.Controls.Add(DeleteNameTB);
+            flowLayoutPanel1.Controls.Add(DeliteIndexBtn);
             flowLayoutPanel1.Controls.Add(label1);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(371, 445);
+            flowLayoutPanel1.Size = new Size(371, 400);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // label5
@@ -91,7 +99,7 @@
             // 
             NombreAddTB.Location = new Point(3, 66);
             NombreAddTB.Name = "NombreAddTB";
-            NombreAddTB.Size = new Size(125, 27);
+            NombreAddTB.Size = new Size(171, 27);
             NombreAddTB.TabIndex = 2;
             NombreAddTB.TextChanged += NombreAddTB_TextChanged;
             // 
@@ -108,7 +116,7 @@
             // 
             TablaAddTB.Location = new Point(3, 119);
             TablaAddTB.Name = "TablaAddTB";
-            TablaAddTB.Size = new Size(125, 27);
+            TablaAddTB.Size = new Size(171, 27);
             TablaAddTB.TabIndex = 4;
             TablaAddTB.TextChanged += TablaAddTB_TextChanged;
             // 
@@ -125,7 +133,7 @@
             // 
             ColumnaAddTB.Location = new Point(3, 172);
             ColumnaAddTB.Name = "ColumnaAddTB";
-            ColumnaAddTB.Size = new Size(125, 27);
+            ColumnaAddTB.Size = new Size(171, 27);
             ColumnaAddTB.TabIndex = 6;
             ColumnaAddTB.TextChanged += ColumnaAddTB_TextChanged;
             // 
@@ -133,7 +141,7 @@
             // 
             AgregarBtn.Location = new Point(3, 205);
             AgregarBtn.Name = "AgregarBtn";
-            AgregarBtn.Size = new Size(132, 45);
+            AgregarBtn.Size = new Size(171, 45);
             AgregarBtn.TabIndex = 7;
             AgregarBtn.Text = "Agregar Indice";
             AgregarBtn.UseVisualStyleBackColor = true;
@@ -159,11 +167,11 @@
             label7.TabIndex = 10;
             label7.Text = "Nombre de Indice";
             // 
-            // NombreRecBtn
+            // NombreRecTB
             // 
             NombreRecTB.Location = new Point(3, 319);
-            NombreRecTB.Name = "NombreRecBtn";
-            NombreRecTB.Size = new Size(125, 27);
+            NombreRecTB.Name = "NombreRecTB";
+            NombreRecTB.Size = new Size(171, 27);
             NombreRecTB.TabIndex = 11;
             NombreRecTB.TextChanged += textBox4_TextChanged;
             // 
@@ -171,16 +179,53 @@
             // 
             ReconstruirBtn.Location = new Point(3, 352);
             ReconstruirBtn.Name = "ReconstruirBtn";
-            ReconstruirBtn.Size = new Size(132, 40);
+            ReconstruirBtn.Size = new Size(171, 45);
             ReconstruirBtn.TabIndex = 12;
             ReconstruirBtn.Text = "Reconstruir";
             ReconstruirBtn.UseVisualStyleBackColor = true;
             ReconstruirBtn.Click += ReconstruirBtn_Click;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(193, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(171, 31);
+            label9.TabIndex = 16;
+            label9.Text = "Eliminar indece";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(193, 31);
+            label8.Name = "label8";
+            label8.Size = new Size(68, 20);
+            label8.TabIndex = 13;
+            label8.Text = "Nombre ";
+            // 
+            // DeleteNameTB
+            // 
+            DeleteNameTB.Location = new Point(193, 54);
+            DeleteNameTB.Name = "DeleteNameTB";
+            DeleteNameTB.Size = new Size(171, 27);
+            DeleteNameTB.TabIndex = 14;
+            DeleteNameTB.TextChanged += DeleteNameTB_TextChanged;
+            // 
+            // DeliteIndexBtn
+            // 
+            DeliteIndexBtn.Location = new Point(193, 87);
+            DeliteIndexBtn.Name = "DeliteIndexBtn";
+            DeliteIndexBtn.Size = new Size(171, 40);
+            DeliteIndexBtn.TabIndex = 15;
+            DeliteIndexBtn.Text = "Eliminar indece";
+            DeliteIndexBtn.UseVisualStyleBackColor = true;
+            DeliteIndexBtn.Click += DeliteIndexBtn_Click;
+            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(3, 395);
+            label1.Location = new Point(193, 130);
             label1.Name = "label1";
             label1.Size = new Size(0, 20);
             label1.TabIndex = 0;
@@ -191,7 +236,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(flowLayoutPanel1);
             Name = "IndecesAdd_View";
-            Size = new Size(371, 445);
+            Size = new Size(371, 400);
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
@@ -213,5 +258,9 @@
         private Label label7;
         private TextBox NombreRecTB;
         private Button ReconstruirBtn;
+        private Label label9;
+        private Label label8;
+        private TextBox DeleteNameTB;
+        private Button DeliteIndexBtn;
     }
 }

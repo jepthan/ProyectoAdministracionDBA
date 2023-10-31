@@ -23,6 +23,7 @@ namespace ProyectoAdministracionDBA.Views
 
         private string name { get; set; }
 
+        private string delName {  get; set; }
         private void NombreAddTB_TextChanged(object sender, EventArgs e)
         {
             indice.Nombre = NombreAddTB.Text;
@@ -50,7 +51,17 @@ namespace ProyectoAdministracionDBA.Views
 
         private void ReconstruirBtn_Click(object sender, EventArgs e)
         {
-            indice.ReconstruirIndice(this.name);
+            Indice.ReconstruirIndice(this.name);
+        }
+
+        private void DeliteIndexBtn_Click(object sender, EventArgs e)
+        {
+            Indice.Delete(delName);
+        }
+
+        private void DeleteNameTB_TextChanged(object sender, EventArgs e)
+        {
+            delName = DeleteNameTB.Text;
         }
     }
 }
