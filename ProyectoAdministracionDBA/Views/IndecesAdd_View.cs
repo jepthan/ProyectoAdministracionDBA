@@ -16,29 +16,41 @@ namespace ProyectoAdministracionDBA.Views
         public IndecesAdd_View()
         {
             InitializeComponent();
-            Indice = new Indice("","","");
+            indice = new Indice("", "", "");
             //this.Dock = DockStyle.Fill;
         }
-        private Indice Indice { get; set; }
+        private Indice indice { get; set; }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private string name { get; set; }
+
+        private void NombreAddTB_TextChanged(object sender, EventArgs e)
         {
-
+            indice.Nombre = NombreAddTB.Text;
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void TablaAddTB_TextChanged(object sender, EventArgs e)
         {
-
+            indice.Tabla = TablaAddTB.Text;
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void ColumnaAddTB_TextChanged(object sender, EventArgs e)
         {
-
+            indice.Columna = ColumnaAddTB.Text;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AgregarBtn_Click(object sender, EventArgs e)
         {
+            indice.addIndex();
+        }
 
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            this.name = NombreRecTB.Text;
+        }
+
+        private void ReconstruirBtn_Click(object sender, EventArgs e)
+        {
+            indice.ReconstruirIndice(this.name);
         }
     }
 }

@@ -76,7 +76,7 @@ namespace ProyectoAdministracionDBA
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(799, 450);
+            tabControl1.Size = new Size(799, 544);
             tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -107,7 +107,7 @@ namespace ProyectoAdministracionDBA
             tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(791, 417);
+            tabPage3.Size = new Size(791, 511);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Crear Indices";
             tabPage3.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@ namespace ProyectoAdministracionDBA
             // 
             indecesAdd_View1.Location = new Point(8, 6);
             indecesAdd_View1.Name = "indecesAdd_View1";
-            indecesAdd_View1.Size = new Size(464, 365);
+            indecesAdd_View1.Size = new Size(464, 450);
             indecesAdd_View1.TabIndex = 0;
             // 
             // Form1

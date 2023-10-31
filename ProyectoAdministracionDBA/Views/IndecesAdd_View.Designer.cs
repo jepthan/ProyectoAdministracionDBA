@@ -29,27 +29,37 @@
         private void InitializeComponent()
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
-            label1 = new Label();
+            label5 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            NombreAddTB = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            TablaAddTB = new TextBox();
             label4 = new Label();
-            textBox3 = new TextBox();
-            button1 = new Button();
+            ColumnaAddTB = new TextBox();
+            AgregarBtn = new Button();
+            label6 = new Label();
+            label7 = new Label();
+            NombreRecTB = new TextBox();
+            ReconstruirBtn = new Button();
+            label1 = new Label();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(label1);
+            flowLayoutPanel1.Controls.Add(label5);
             flowLayoutPanel1.Controls.Add(label2);
-            flowLayoutPanel1.Controls.Add(textBox1);
+            flowLayoutPanel1.Controls.Add(NombreAddTB);
             flowLayoutPanel1.Controls.Add(label3);
-            flowLayoutPanel1.Controls.Add(textBox2);
+            flowLayoutPanel1.Controls.Add(TablaAddTB);
             flowLayoutPanel1.Controls.Add(label4);
-            flowLayoutPanel1.Controls.Add(textBox3);
-            flowLayoutPanel1.Controls.Add(button1);
+            flowLayoutPanel1.Controls.Add(ColumnaAddTB);
+            flowLayoutPanel1.Controls.Add(AgregarBtn);
+            flowLayoutPanel1.Controls.Add(label6);
+            flowLayoutPanel1.Controls.Add(label7);
+            flowLayoutPanel1.Controls.Add(NombreRecTB);
+            flowLayoutPanel1.Controls.Add(ReconstruirBtn);
+            flowLayoutPanel1.Controls.Add(label1);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 0);
@@ -57,74 +67,123 @@
             flowLayoutPanel1.Size = new Size(371, 445);
             flowLayoutPanel1.TabIndex = 0;
             // 
-            // label1
+            // label5
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(3, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 20);
-            label1.TabIndex = 0;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(3, 6);
+            label5.Margin = new Padding(3, 6, 3, 6);
+            label5.Name = "label5";
+            label5.Size = new Size(171, 31);
+            label5.TabIndex = 8;
+            label5.Text = "Agregar Indece";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(3, 20);
+            label2.Location = new Point(3, 43);
             label2.Name = "label2";
             label2.Size = new Size(64, 20);
             label2.TabIndex = 1;
             label2.Text = "Nombre";
             // 
-            // textBox1
+            // NombreAddTB
             // 
-            textBox1.Location = new Point(3, 43);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            NombreAddTB.Location = new Point(3, 66);
+            NombreAddTB.Name = "NombreAddTB";
+            NombreAddTB.Size = new Size(125, 27);
+            NombreAddTB.TabIndex = 2;
+            NombreAddTB.TextChanged += NombreAddTB_TextChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(3, 73);
+            label3.Location = new Point(3, 96);
             label3.Name = "label3";
             label3.Size = new Size(44, 20);
             label3.TabIndex = 3;
             label3.Text = "Tabla";
             // 
-            // textBox2
+            // TablaAddTB
             // 
-            textBox2.Location = new Point(3, 96);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 4;
-            textBox2.TextChanged += textBox2_TextChanged;
+            TablaAddTB.Location = new Point(3, 119);
+            TablaAddTB.Name = "TablaAddTB";
+            TablaAddTB.Size = new Size(125, 27);
+            TablaAddTB.TabIndex = 4;
+            TablaAddTB.TextChanged += TablaAddTB_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(3, 126);
+            label4.Location = new Point(3, 149);
             label4.Name = "label4";
             label4.Size = new Size(68, 20);
             label4.TabIndex = 5;
             label4.Text = "Columna";
             // 
-            // textBox3
+            // ColumnaAddTB
             // 
-            textBox3.Location = new Point(3, 149);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 6;
-            textBox3.TextChanged += textBox3_TextChanged;
+            ColumnaAddTB.Location = new Point(3, 172);
+            ColumnaAddTB.Name = "ColumnaAddTB";
+            ColumnaAddTB.Size = new Size(125, 27);
+            ColumnaAddTB.TabIndex = 6;
+            ColumnaAddTB.TextChanged += ColumnaAddTB_TextChanged;
             // 
-            // button1
+            // AgregarBtn
             // 
-            button1.Location = new Point(3, 182);
-            button1.Name = "button1";
-            button1.Size = new Size(132, 45);
-            button1.TabIndex = 7;
-            button1.Text = "Agregar Indice";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            AgregarBtn.Location = new Point(3, 205);
+            AgregarBtn.Name = "AgregarBtn";
+            AgregarBtn.Size = new Size(132, 45);
+            AgregarBtn.TabIndex = 7;
+            AgregarBtn.Text = "Agregar Indice";
+            AgregarBtn.UseVisualStyleBackColor = true;
+            AgregarBtn.Click += AgregarBtn_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(3, 259);
+            label6.Margin = new Padding(3, 6, 3, 6);
+            label6.Name = "label6";
+            label6.Size = new Size(184, 31);
+            label6.TabIndex = 9;
+            label6.Text = "Recostruir Indice";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(3, 296);
+            label7.Name = "label7";
+            label7.Size = new Size(129, 20);
+            label7.TabIndex = 10;
+            label7.Text = "Nombre de Indice";
+            // 
+            // NombreRecBtn
+            // 
+            NombreRecTB.Location = new Point(3, 319);
+            NombreRecTB.Name = "NombreRecBtn";
+            NombreRecTB.Size = new Size(125, 27);
+            NombreRecTB.TabIndex = 11;
+            NombreRecTB.TextChanged += textBox4_TextChanged;
+            // 
+            // ReconstruirBtn
+            // 
+            ReconstruirBtn.Location = new Point(3, 352);
+            ReconstruirBtn.Name = "ReconstruirBtn";
+            ReconstruirBtn.Size = new Size(132, 40);
+            ReconstruirBtn.TabIndex = 12;
+            ReconstruirBtn.Text = "Reconstruir";
+            ReconstruirBtn.UseVisualStyleBackColor = true;
+            ReconstruirBtn.Click += ReconstruirBtn_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(3, 395);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 20);
+            label1.TabIndex = 0;
             // 
             // IndecesAdd_View
             // 
@@ -143,11 +202,16 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox NombreAddTB;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox TablaAddTB;
         private Label label4;
-        private TextBox textBox3;
-        private Button button1;
+        private TextBox ColumnaAddTB;
+        private Button AgregarBtn;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private TextBox NombreRecTB;
+        private Button ReconstruirBtn;
     }
 }

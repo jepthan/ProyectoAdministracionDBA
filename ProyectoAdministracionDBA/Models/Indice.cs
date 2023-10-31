@@ -17,9 +17,13 @@ namespace ProyectoAdministracionDBA.Models
 
         public string Columna { get; set; }
 
-        static public void addIndex() {
+        public void addIndex() {
             
             //TODO codigo de dba
+        }
+        public void ReconstruirIndice(string name)
+        {
+            //TODO RECONSTRUIR INDICE DBA
         }
     }
 }
